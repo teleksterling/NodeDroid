@@ -52,6 +52,17 @@ public class ProviderStore {
         vodafoneMBBProv.setBackgroundResource("vodaheader"); //#fe0000
         addProvider(vodafoneMBBProv);
 
+        Provider bigpondProv = new Provider();
+        bigpondProv.setName("Bigpond Broadband");
+        bigpondProv.setBeta(true);
+        bigpondProv.setLogoURL("https://my.bigpond.com/bphf/res/img/sin.gif");
+        bigpondProv.setUrl("http://www.bigpond.com/");
+        bigpondProv.setTextColour("#006685");        
+        bigpondProv.setGraphColors(new GraphColors(0xff000000, 0xff006685, 
+                0xffFF9D00, 0xffF6FF00, 0xffA97E38, 0xffFFCE7F, 0xffFFD000          
+        ));  //todo update colours
+        bigpondProv.setBackgroundResource("optusheader"); //TODO create Bigpond Header.xml
+        addProvider(bigpondProv);
     }
     
     public static ProviderStore getInstance() {

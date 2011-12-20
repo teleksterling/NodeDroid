@@ -9,6 +9,7 @@ import android.content.Context;
 import com.eightbitcloud.internode.GraphColors;
 import com.eightbitcloud.internode.provider.InternodeFetcher;
 import com.eightbitcloud.internode.provider.OptusFetcher;
+import com.eightbitcloud.internode.provider.BigpondFetcher;
 import com.eightbitcloud.internode.provider.ProviderFetcher;
 import com.eightbitcloud.internode.provider.VodafoneMBBFetcher;
 
@@ -80,6 +81,8 @@ public class Provider {
             return new VodafoneMBBFetcher(this, ctx);
         } else if (name.equalsIgnoreCase("optus mobile")) {
             return new OptusFetcher(this, ctx);
+        } else if (name.equalsIgnoreCase("Bigpond Internet")) {
+            return new BigpondFetcher(this, ctx);
         } else
             return null;
     }
